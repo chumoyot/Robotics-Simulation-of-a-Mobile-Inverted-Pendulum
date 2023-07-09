@@ -28,9 +28,11 @@ The second assignment involved PID balancing of MIP. Only the body angle was bal
 The output is similar to that of the LQR controller above.
 
 Week 6: We began by reviewing the quadrotor controller which consists of two loops. The outer positional control loop which controls thrust and an inner attitude control loop
-that determines the attitude. The position control relies on the attitude control so the inner loop has to run faster, [an example of CCS]. We also learned the Cascade Control Strategy. What a cascade means in control system terms, is that there's an influence of one subsystem on another, without direct return influence. The first assignment involved control of MIP with noisy gyroscope readngs. We then had to use EKF to filter them and write a controller to balance it. I could not figure out why the robot run off the screen but I think it's because I did not add any damping to the wheels. You can see in the plot that wheel angle increases infinitely while the rod angle remains balanced at close to vertical.
+that determines the attitude. The position control relies on the attitude control so the inner loop has to run faster, [an example of CCS]. We also learned the Cascade Control Strategy. What a cascade means in control system terms, is that there's an influence of one subsystem on another, without direct return influence. The first assignment involved control of MIP with noisy gyroscope readngs. We then had to use EKF to filter them and write a controller to balance it. I could not figure out why the robot run off the screen but I think it's because I did not add any damping to the wheels. You can see in the plot that wheel angle [theta] increases infinitely while the rod angle [phi] remains balanced at close to vertical.
 
 ![untitled](https://github.com/chumoyot/Robotics-UPenn/assets/135506318/a032b004-e37c-4f6d-95db-0d6ae746e3f5)
+
+The last assignment featured balancing the MIP while also moving the base against a reference trajectory. The Cascade Control Strategy was applied here where an inner control for phi [the rod angle] controlled the outer control for theta [the wheel angle]. Since we now have 2 controllers with 4 unknown controller constants, tuning this was frustrating to say the least. I uncountable hours trying to figure the proportional and derivative constants but I gave up. Miraculously, I was within the tolerance and the grader passed me but I'll find some time to re visit it.
 
 
 
