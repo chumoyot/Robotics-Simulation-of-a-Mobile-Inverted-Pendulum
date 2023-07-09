@@ -14,5 +14,13 @@ The second (2) assignment involved PD tracking of a Revolute-Revolute manipulato
 
 ![RR manipulation](https://github.com/chumoyot/Robotics-UPenn/assets/135506318/4086ccd6-27be-4d25-9df6-66fe77efe418)
 
+Week 3: We learned about using EKF [Extended Kalman Filter] to get scalar orientation from an IMU. The advantage of EKF over KF is that it is good at solving non-linear problems which are abundant in the real world. Kalman filter is designed for linear Gaussian problems, where noise is assumed to be Gaussian. Taylor expansion is used to approximate linearity. The first assignment involved estimating the roll angle by filtering noisy gyroscope readings. Code started by defining constants like Q, which is the noise covariance matrix, and R, the measurement covariance matrix. The code block involved 4 major steps: prediction, setting of the Kalman Gain, and updating the state and covariance values using the Kalman gain. In finding the Kalman gain, we had to find the Jacobian of the nonlinear measurement. Here is the output showing the filtered data vs the raw data.
+
+![untitled](https://github.com/chumoyot/Robotics-UPenn/assets/135506318/90b4134f-71e8-43cc-a533-bf960a41f250)
+
+Week 4: We began by reviewing the Lagrangian mechanics. They are a formulation that gives an alternative way to write Newton's equations of motion. The major advantage it has over Newtonian laws is it is easy to automate in software. For systems that are not acted upon by external forces, we take the kinetic energy, subtract the potential energy and apply the Euler Lagrangian operator and set the result to zero. We then used the Lagrangian to derive the dynamic model of an inverted pendulum.
+
+Week 5:
+
 
 
