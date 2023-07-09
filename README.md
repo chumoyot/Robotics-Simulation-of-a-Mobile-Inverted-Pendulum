@@ -20,7 +20,11 @@ Week 3: We learned about using EKF [Extended Kalman Filter] to get scalar orient
 
 Week 4: We began by reviewing the Lagrangian mechanics. They are a formulation that gives an alternative way to write Newton's equations of motion. The major advantage it has over Newtonian laws is it is easy to automate in software. For systems that are not acted upon by external forces, we take the kinetic energy, subtract the potential energy and apply the Euler Lagrangian operator and set the result to zero. We then used the Lagrangian to derive the dynamic model of an inverted pendulum.
 
-Week 5:
+Week 5: We dealt with local linearization of MIP about the position we want to get, which is upright. We figured out how to find if the MIP is controllable, and then proceeding to sk MATLAB to find an optimal controller [LQR] that will achieve this upright goal. The drawback of using LQR controller for MIP is that you need all the sensory inputs of all the degrees of freedoms and their derivatives for it to be implemented. This will be a problem on a physical system as you'll need several sensors. The first assignment involved LQR stabilization of MIP. After finding out the Jacobian linearization we used the control system's toolbox to find the controllabillity and susequently the value of constant K. Which is the LQR gain matrix. Which we then substituted it in the controller.
+
+![untitled](https://github.com/chumoyot/Robotics-UPenn/assets/135506318/dba25f81-8826-47a6-8d96-0d9a1af95133)
+
+The second assignment involved PID balancing of MIP. Only the body angle was balanced and the wheel angle ignored.  
 
 
 
