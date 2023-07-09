@@ -27,6 +27,10 @@ Week 5: We dealt with local linearization of MIP about the position we want to g
 The second assignment involved PID balancing of MIP. Only the body angle was balanced and the wheel angle ignored. The codes were similar to PD controller. Only new addtions was using the persistent variable in MATLAB to compute the integral error. The persistent variable keeps track of its value between calls to the function. The hard part was finding kp, kd and ki values as it was through trial and error. Although there is an easier way with the Ziegler-Nichols tuning method. But I didn't have any energy left to learn that.
 The output is similar to that of the LQR controller above.
 
+Week 6: We began by reviewing the quadrotor controller which consists of two loops. The outer positional control loop which controls thrust and an inner attitude control loop
+that determines the attitude. The position control relies on the attitude control so the inner loop has to run faster, [an example of CCS]. We also learned the Cascade Control Strategy. What a cascade means in control system terms, is that there's an influence of one subsystem on another, without direct return influence. The first assignment involved control of MIP with noisy gyroscope readngs. We then had to use EKF to filter them and write a controller to balance it. I could not figure out why the robot run off the screen but I think it's because I did not add any damping to the wheels. You can see in the plot that wheel angle increases infinitely while the rod angle remains balanced at close to vertical.
+
+![untitled](https://github.com/chumoyot/Robotics-UPenn/assets/135506318/a032b004-e37c-4f6d-95db-0d6ae746e3f5)
 
 
 
