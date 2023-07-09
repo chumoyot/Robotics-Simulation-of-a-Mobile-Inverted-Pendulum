@@ -24,7 +24,10 @@ Week 5: We dealt with local linearization of MIP about the position we want to g
 
 ![untitled](https://github.com/chumoyot/Robotics-UPenn/assets/135506318/dba25f81-8826-47a6-8d96-0d9a1af95133)
 
-The second assignment involved PID balancing of MIP. Only the body angle was balanced and the wheel angle ignored.  
+The second assignment involved PID balancing of MIP. Only the body angle was balanced and the wheel angle ignored. The codes were similar to PD controller. Only new addtions was using the persistent variable in MATLAB to compute the integral error. The persistent variable keeps track of its value between calls to the function. The hard part was finding kp, kd and ki values as it was through trial and error. Although there is an easier way with the Ziegler-Nichols tuning method. But I didn't have any energy left to learn that.
+The output is similar to that of the LQR controller above.
+
+
 
 
 
